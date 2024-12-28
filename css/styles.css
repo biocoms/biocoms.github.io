@@ -141,8 +141,140 @@ nav ul li a:hover {
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
-/* Intro Section */
-.intro {
+
+/* Intro Section for People Page */
+.intro-people {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #535962; /* Dark Cool Gray */
+    color: #F8F9FA; /* White text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.intro-people h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.intro-people p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #FFCE0A; /* Yellow for subtitle */
+    line-height: 1.6;
+}
+
+/* People Section Background */
+.people {
+    padding: 40px 20px;
+    background-color: #FAF9F6; /* Ivory */
+    max-width: 1200px;
+    margin: 20px auto; /* Reduce space between sections */
+}
+
+/* Section Headers */
+.people h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2D2D2D; /* Charcoal Black */
+    border-bottom: 2px solid #FFCE0A; /* Yellow underline */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+
+/* Team Grid */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around; /* Spread items across the page */
+    margin-top: 20px;
+}
+
+/* Team Member Blocks */
+.team-member {
+    width: 280px; /* Slightly larger width */
+    text-align: center;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #535962; /* Cool Gray */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer; /* Indicate it's clickable */
+    text-decoration: none; /* Remove link styles */
+    color: inherit; /* Inherit text color */
+}
+
+/* Hover Effect */
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+    background-color: #FAF9F6; /* Ivory on hover */
+    color: #535962; /* Cool Gray text on hover */
+}
+
+/* Team Member Content */
+.team-member img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #F8F9FA; /* White text */
+}
+
+.team-member p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #FFCE0A; /* Yellow for subtitle */
+}
+
+/* Remove Learn More */
+.team-member a {
+    display: none;
+}
+
+
+
+/* Alumni Section */
+.alumni-list {
+    list-style: none;
+    padding: 20px 30px;
+    margin: 0 auto;
+    background-color: #FAF9F6; /* Ivory */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #2D2D2D; /* Charcoal Black */
+}
+
+/* Alumni Custom Bullets */
+.alumni-list li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px; /* Space for custom icon */
+}
+
+.alumni-list li::before {
+    content: "🎓"; /* Graduation cap */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #FFCE0A; /* Yellow accent */
+    font-size: 18px;
+}
+/* Intro Section - Resources*/
+.intro-resources {
     text-align: center;
     padding: 100px 20px; /* Slightly larger padding for uniformity */
     background-color: #535962; /* Dark Cool Gray */
@@ -150,14 +282,14 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.intro h1 {
+.intro-resources h1 {
     font-family: 'Playfair Display', serif;
     font-size: 36px;
     margin-bottom: 20px;
     color: #F8F9FA; /* White */
 }
 
-.intro p {
+.intro-resources p {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 1.6;

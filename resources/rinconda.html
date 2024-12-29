@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>R in Conda Environment - BioComs Lab</title>
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Corrected CSS path (go up one folder, then into css/) -->
+  <link rel="stylesheet" href="../css/resources.css" />
+
+  <!-- Favicon -->
+  <!-- Again, go up one folder, then into assets/ -->
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <!-- Corrected path to Logo.png -->
+      <img src="../assets/Logo.png" alt="BioComs Lab Logo" />
+    </div>
+    <nav>
+      <ul>
+        <!-- All these links are up one directory now -->
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../research.html">Research</a></li>
+        <li><a href="../people.html">People</a></li>
+        <li><a href="../resources.html">Resources</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Intro Section -->
+  <section class="intro-resources">
+    <h1>R Conda Environment</h1>
+    <p>
+      This page provides instructions on installing, configuring, and troubleshooting
+      R environments using Conda for reproducible workflows.
+    </p>
+  </section>
+
+  <!-- Main Content Section -->
+  <section class="content-section">
+    <h2>Getting Started</h2>
+    <p>
+      Below is a step-by-step guide to creating and managing your R Conda
+      environments. Feel free to expand on these details or alter this section
+      to suit your specific instructions.
+    </p>
+
+    <ol>
+      <li>Install Miniconda on HPC.</li>
+      <li>Create a new environment for R (<code>renv.yaml</code> under lab directory):
+        <pre><code>conda env create -n renv -f renv.yaml</code></pre>
+      </li>
+      <li>Activate your new R environment:
+        <pre><code>conda activate renv</code></pre>
+      </li>
+      <li>Install any additional R packages:
+        <pre><code>conda install -c r r-tidyverse
+# or
+R
+install.packages("tidyverse")</code></pre>
+      </li>
+      <li>Verify installed packages:
+        <pre><code>conda list</code></pre>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Installation Location Section -->
+  <section class="content-section">
+    <h2>Important Considerations on Package Installation and Running Jobs on HPC</h2>
+    <ul>
+      <li>
+        <strong>If you execute a command on IDAS R Studio:</strong><br />
+        When you install an R package directly in IDAS terminal,
+        the packages by default will be installed under <code>/Home/.conda/envs/YOUR_ENV_NAME</code> (as seen on the RStudio file browser).
+        RStudio will, but HPC will <strong>NOT</strong> recognize this address.
+      </li>
+      <li>
+        <strong>If you run a job on Argon HPC CLI:</strong><br />
+        When you install a package, they usually get installed at <code>/Users/HAWK_ID/miniconda3/envs/YOUR_ENV_NAME/lib/R/library</code> on YOUR assigned HPC space.
+      </li>
+      <li>
+        <strong>To make sure both HPC and IDAS R Studio refer to the same installation location,</strong> run  <code>.libPaths("../hpchome/miniconda3/envs/renv/lib/R/library")</code> before requiring libraries.
+      </li>
+    </ul>
+    <!-- Feel free to add more troubleshooting points here -->
+  </section>
+
+  <!-- Troubleshooting Tips Section -->
+  <section class="content-section">
+    <h2>Troubleshooting Tips</h2>
+    
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 BioComs Lab | University of Iowa</p>
+    <p>
+      Email:
+      <a href="mailto:erliang-zeng@uiowa.edu">erliang-zeng@uiowa.edu</a>
+    </p>
+  </footer>
+</body>
+</html>

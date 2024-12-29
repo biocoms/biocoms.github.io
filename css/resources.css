@@ -1,4 +1,6 @@
-/* General Styles */
+/* ------------------------------------------------- */
+/* General Styles                                     */
+/* ------------------------------------------------- */
 body {
     font-family: 'IBM Plex Mono', monospace;
     margin: 0;
@@ -7,7 +9,9 @@ body {
     background-color: #F8F9FA; /* Soft Ivory */
 }
 
-/* Header Section */
+/* ------------------------------------------------- */
+/* Header Section                                     */
+/* ------------------------------------------------- */
 header {
     display: flex;
     justify-content: space-between;
@@ -42,13 +46,15 @@ nav ul li a:hover {
     border-bottom: 2px solid #FFCE0A; /* Yellow Underline */
 }
 
-/* Introduction Section */
+/* ------------------------------------------------- */
+/* Introduction (Hero) Section                       */
+/* ------------------------------------------------- */
 .intro-resources {
     text-align: center;
     padding: 100px 20px;
     background-color: #535962; /* Dark Cool Gray */
     color: #F8F9FA; /* White */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .intro-resources h1 {
@@ -63,14 +69,15 @@ nav ul li a:hover {
     color: #FFCE0A; /* Logo Yellow */
 }
 
-
-/* Gallery Section */
+/* ------------------------------------------------- */
+/* Gallery Section (Main Resources Page)             */
+/* ------------------------------------------------- */
 .gallery-section {
     padding: 10px 20px;
-    max-width: 1000px; /* Balanced width */
-    margin: 0 auto 10px auto; /* Center align with space below */
-    text-align: center; /* Center text alignment */
-    background-color: transparent; /* No background box */
+    max-width: 1000px;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    background-color: transparent;
 }
 
 .gallery-section h2 {
@@ -78,13 +85,11 @@ nav ul li a:hover {
     font-size: 36px;
     color: #2D2D2D; /* Charcoal Black */
     margin-bottom: 20px;
-    text-align: center;
     border-bottom: 2px solid #FFCE0A; /* Yellow underline */
     display: inline-block;
     padding-bottom: 5px;
 }
 
-/* Gallery Grid */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -106,6 +111,7 @@ nav ul li a:hover {
 
 .gallery-item img {
     width: 100%;
+    height: auto;
 }
 
 .gallery-item h3 {
@@ -131,7 +137,78 @@ nav ul li a:hover {
     color: #FFCE0A;
 }
 
-/* Footer */
+/* ------------------------------------------------- */
+/* Subpage Content Sections (e.g., rinconda.html)    */
+/* ------------------------------------------------- */
+/* Container for individual resource pages */
+.content-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Headings within content sections */
+.content-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #2D2D2D;
+    margin-bottom: 15px;
+    border-left: 4px solid #FFCE0A;
+    padding-left: 10px;
+}
+
+/* Paragraphs within content sections */
+.content-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #2D2D2D;
+}
+
+/* Lists within content sections */
+.content-section ol,
+.content-section ul {
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #2D2D2D;
+}
+
+/* Code blocks and inline code */
+.content-section code {
+    background-color: #F1F1F1;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.content-section pre {
+    background-color: #F1F1F1;
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 1em 0;
+    line-height: 1.4em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 15px;
+}
+
+/* Blockquote styling (if needed) */
+.content-section blockquote {
+    border-left: 4px solid #FFCE0A;
+    padding-left: 16px;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+/* ------------------------------------------------- */
+/* Footer                                            */
+/* ------------------------------------------------- */
 footer {
     text-align: center;
     background-color: #474744;
@@ -149,10 +226,27 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design */
+/* ------------------------------------------------- */
+/* Responsive Design                                 */
+/* ------------------------------------------------- */
 @media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
     .gallery-item {
         flex: 1 1 100%;
         max-width: 100%;
+    }
+
+    .content-section {
+        margin: 20px auto;
+        padding: 20px;
+    }
+    .content-section h2 {
+        font-size: 24px;
+    }
+    .content-section p {
+        font-size: 16px;
     }
 }

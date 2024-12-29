@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources - BioComs Lab</title>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <!-- Correct CSS Path -->
+    <link rel="stylesheet" href="css/resources.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
         <div class="logo">
             <img src="assets/Logo.png" alt="BioComs Lab Logo">
@@ -20,7 +22,6 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="people.html">People</a></li>
-                <li><a href="publications.html">Publications</a></li>
                 <li><a href="resources.html" class="active">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -28,52 +29,52 @@
     </header>
 
     <!-- Intro Section -->
-    <section class="intro intro-resources">
+    <section class="intro-resources">
         <h1>Resources</h1>
         <p>
-            Explore the tools, projects, and resources developed or curated by the BioComs Lab. 
-            Below, you'll find links to our current lab projects, source codes, and useful guides for research and analysis.
+            Explore the tools, projects, and resources developed or curated by the BioComs Lab. Below, you'll find links to our current lab projects, source codes, and useful guides for research and analysis.
         </p>
     </section>
 
-    <section class="resources">
-    <h2>Current Lab Projects</h2>
-    <div class="gallery">
-        <div class="gallery-item">
-            <a href="https://github.com/biocoms/BEAR" target="_blank">
-                <img src="assets/bear-thumbnail.png" alt="BEAR Tool Thumbnail">
+    <!-- Current Lab Projects -->
+    <section class="gallery-section">
+        <h2>Current Lab Projects</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="assets/tool1.jpg" alt="BEAR Tool Thumbnail">
                 <h3>BEAR Tool</h3>
-            </a>
-            <p>Bootstrap and Attribute Ranking Tool identifies the best features from a differential expression dataset using multiple feature selection methods, ensemble ranking, and classifications.</p>
+                <p>Bootstrap and Attribute Ranking Tool for differential expression datasets.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <h2>Resources</h2>
-    <div class="gallery">
-        <div class="gallery-item">
-            <a href="resources/rinconda.html" target="_blank">
-                <img src="assets/r-conda-thumbnail.png" alt="R Conda Environment">
+    <!-- Resources -->
+    <section class="gallery-section">
+        <h2>Resources</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="assets/tool2.jpg" alt="R Conda Environment Thumbnail">
                 <h3>R Conda Environment</h3>
-            </a>
-            <p>A guide to setting up and managing R environments using Conda for reproducible research workflows.</p>
-        </div>
-        <div class="gallery-item">
-            <a href="resources/hpc_cheatsheet.html" target="_blank">
-                <img src="assets/hpc-thumbnail.png" alt="Argon HPC Cheatsheet">
+                <p>A guide to setting up and managing R environments using Conda for reproducible workflows.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/tool3.jpg" alt="Argon HPC Cheatsheet Thumbnail">
                 <h3>Argon HPC Cheatsheet</h3>
-            </a>
-            <p>A concise guide to using the Argon HPC cluster for high-performance computing tasks.</p>
+                <p>A concise guide to using the Argon HPC cluster for high-performance computing tasks.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <!-- Footer Section -->
+    <!-- JS -->
+    <script src="js/resources.js"></script>
+
+    <!-- Footer -->
     <footer>
         <p>© 2024 BioComs Lab | University of Iowa</p>
         <p>Email: <a href="mailto:erliang-zeng@uiowa.edu">erliang-zeng@uiowa.edu</a></p>
     </footer>
-
-    <!-- JS -->
-    <script src="js/main.js"></script>
 </body>
 </html>

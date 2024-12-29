@@ -1,0 +1,237 @@
+/* General Styles */
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 0;
+    padding: 0;
+    color: #2D2D2D; /* Charcoal Black */
+    background-color: #F8F9FA; /* Soft Ivory */
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #474744; /* Charcoal Gray */
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F8F9FA; /* White text */
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFCE0A; /* Logo Yellow */
+    border-bottom: 2px solid #FFCE0A; /* Yellow Underline */
+}
+
+/* Introduction Section */
+.intro-people {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #535962; /* Dark Cool Gray */
+    color: #F8F9FA; /* White */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.intro-people h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.intro-people p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+    color: #FFCE0A; /* Logo Yellow */
+}
+
+/* Section Titles */
+.section-title {
+    padding: 10px 20px;
+    max-width: 1000px; /* Balanced width */
+    margin: 0 auto 10px auto; /* Center align with space below */
+    text-align: center; /* Center text alignment */
+    background-color: transparent; /* No background box */
+}
+.section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #2D2D2D; /* Charcoal Black */
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #FFCE0A; /* Yellow underline */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+
+/* Team Section */
+.team-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Team Grid */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around; /* Spread items across the page */
+    margin-top: 20px;
+}
+
+/* Team Member Blocks */
+.team-member {
+    width: 200px; /* Slightly larger width */
+    text-align: center;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #535962; /* Cool Gray */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer; /* Indicate it's clickable */
+    text-decoration: none; /* Remove link styles */
+    color: inherit; /* Inherit text color */
+}
+
+/* Hover Effect */
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+    background-color: #FAF9F6; /* Ivory on hover */
+    color: #535962; /* Cool Gray text on hover */
+}
+
+/* Team Member Content */
+.team-member img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #F8F9FA; /* White text */
+}
+
+.team-member p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #FFCE0A; /* Yellow for subtitle */
+}
+
+/* Remove Learn More */
+.team-member a {
+    display: none;
+}
+
+/* Alumni Section */
+.alumni-section {
+    padding: 40px 20px;
+    max-width: 900px; /* Adjusted width for balance */
+    margin: 0 auto;
+    text-align: left; /* Align content to the left */
+}
+
+.alumni-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.alumni-list li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    text-align:justify;
+    color: #2D2D2D; /* Charcoal Black */
+    position: relative;
+    padding-left: 25px; /* Add space for icon */
+}
+
+.alumni-list li:before {
+    content: "\1F393"; /* Graduation cap emoji */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    color: #FFCE0A; /* Logo Yellow */
+}
+
+/* Footer Section */
+footer {
+    background-color: #474744; /* Charcoal Gray */
+    color: #F8F9FA; /* White */
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #FFCE0A; /* Logo Yellow */
+}
+
+footer a:hover {
+    color: #0967B2; /* Logo Blue */
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three members per row */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two members per row */
+    }
+    .section-title {
+        font-size: 20px;
+        margin-left: 5%; /* Adjust for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .logo img {
+        height: 40px;
+    }
+    .team-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+    footer {
+        font-size: 12px;
+    }
+}

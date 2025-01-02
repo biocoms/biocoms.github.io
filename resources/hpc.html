@@ -45,9 +45,103 @@
       </p>
     </section>
 
-    <!-- Main Content Section -->
+     <!-- Main Content Section -->
     <section class="content-section">
-      <h2>Getting Started</h2>
+      <h2>Creating a Job Script</h2>
+      <p>
+        Below is an example of a typical job script for submitting jobs to the Argon HPC cluster. Each line is explained in detail.
+      </p>
+      <pre>
+<code>#!/bin/sh
+#$ -cwd
+#$ -pe 128cpn 512
+#$ -q UI-MPI
+#$ -l h_vmem=80G
+#$ -l mem_free=256G
+#$ -M email@uiowa.edu
+#$ -m beas
+#$ -o file.log
+#$ -e file.log
+#$ -V
+</code>
+      </pre>
+
+      <h3>Explanation of the Script</h3>
+      <ul>
+        <li><strong><code>#!/bin/sh</code></strong>: Specifies the shell interpreter for the script.</li>
+        <li><strong><code>#$ -cwd</code></strong>: Ensures the job runs in the current working directory.</li>
+        <li><strong><code>#$ -pe 128cpn 512</code></strong>: Requests a parallel environment with 512 cores, each node having 128 cores per node.</li>
+        <li><strong><code>#$ -q UI-MPI</code></strong>: Specifies the queue to submit the job to (in this case, the <code>UI-MPI</code> queue).</li>
+        <li><strong><code>#$ -l h_vmem=80G</code></strong>: Specifies the hard memory limit per core or slot.</li>
+        <li><strong><code>#$ -l mem_free=256G</code></strong>: Ensures the job runs only on nodes with at least 256GB of free memory available.</li>
+        <li><strong><code>#$ -M email@uiowa.edu</code></strong>: Sets the email address for job notifications.</li>
+        <li><strong><code>#$ -m beas</code></strong>: Specifies when to send email notifications:
+          <ul>
+            <li><code>b</code>: When the job begins.</li>
+            <li><code>e</code>: When the job ends.</li>
+            <li><code>a</code>: If the job aborts.</li>
+            <li><code>s</code>: If the job is suspended.</li>
+          </ul>
+        </li>
+        <li><strong><code>#$ -o file.log</code></strong>: Specifies the file to write standard output.</li>
+        <li><strong><code>#$ -e file.log</code></strong>: Specifies the file to write standard error.</li>
+        <li><strong><code>#$ -V</code></strong>: Exports all environment variables to the job environment.</li>
+      </ul>
+    </section>
+
+    <section class="content-section">
+      <h2>Useful Commands</h2>
+      <h3>Submitting a Job</h3>
+      <pre>
+<code>qsub <jobfile_path>
+</code>
+      </pre>
+      <p>Use <code>qsub</code> followed by the path to the job file to submit a job to the cluster.</p>
+
+      <h3>Checking Job Status</h3>
+      <pre>
+<code>qstat</code>
+      </pre>
+      <p>Use <code>qstat</code> to check the status of submitted jobs. Add your username to filter by your jobs:
+        <pre><code>qstat -u <username></code></pre>
+      </p>
+
+      <h3>Deleting a Job</h3>
+      <pre>
+<code>qdel <job_id>
+</code>
+      </pre>
+      <p>Use <code>qdel</code> followed by the job ID to delete a job from the queue.</p>
+
+      <h3>Releasing a Held Job</h3>
+      <pre>
+<code>qrls <job_id>
+</code>
+      </pre>
+      <p>Use <code>qrls</code> to release a job that is on hold.</p>
+
+      <h3>Loading Modules</h3>
+      <pre>
+<code>module load <module_name>
+</code>
+      </pre>
+      <p>Use <code>module load</code> to load specific software or libraries. For example:
+        <pre><code>module load python</code></pre>
+      </p>
+
+      <h3>Listing Loaded Modules</h3>
+      <pre>
+<code>module list</code>
+      </pre>
+      <p>Displays all currently loaded modules.</p>
+
+      <h3>Unloading a Module</h3>
+      <pre>
+<code>module unload <module_name>
+</code>
+      </pre>
+      <p>Unloads a specified module.</p>
+
     </section>
 
     <!-- Troubleshooting Tips Section -->

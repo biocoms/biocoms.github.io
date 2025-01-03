@@ -64,10 +64,11 @@
         <pre><code>conda activate renv</code></pre>
       </li>
       <li>Install any additional R packages:
-        <pre><code>conda install -c r r-tidyverse
-# or
-R
-install.packages("tidyverse")</code></pre>
+        <pre><code>
+          conda install -c r r-tidyverse
+          # or in R
+          install.packages("tidyverse")
+        </code></pre>
       </li>
       <li>Verify installed packages:
         <pre><code>conda list</code></pre>
@@ -90,7 +91,7 @@ install.packages("tidyverse")</code></pre>
         When you install a package, they usually get installed at <code>/Users/HAWK_ID/miniconda3/envs/YOUR_ENV_NAME/lib/R/library</code> on YOUR assigned HPC space.
       </li>
       <li>
-        <strong>To make sure both HPC and IDAS R Studio refer to the same installation location,</strong> run  <code>.libPaths("../hpchome/miniconda3/envs/renv/lib/R/library")</code> before requiring libraries.
+        <strong>To make sure both HPC and IDAS R Studio refer to the same installation location,</strong> run  <code>.libPaths("CONDA_DIRECTORY_RELATIVE_TO_YOUR_ENV/envs/renv/lib/R/library")</code> before requiring libraries.
       </li>
     </ul>
     <!-- Feel free to add more troubleshooting points here -->
